@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+<title>Registrarse</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body class="bg-dark" style="background-image: url(https://highwaymagazine.files.wordpress.com/2014/10/periodismo-social-connection.jpg); background-position: center; background-repeat: repeat-y">
+
+<header>
+</header>
+
+	<div class="container mt-5 mb-5" style="background-color:rgb(255, 255, 255, 0.8); background-size:cover">
+	        
+
+	   <div class="row">
+	   	<div class="col">
+	        <form action="#" th:action="@{/guardar}" th:object="${estudiante}" method="post">
+				 <fieldset>
+	                    <legend>Regístrate</legend>
+	
+	                    <div class="row">
+	                        <div class="col-lg-5 col-sm-12">
+	                            <div class="form-group">
+	                                <label for="userName">RUT (Sin puntos ni guión) *</label>
+	                                <input id="userName" name="username" th:field="*{rut}" type="text"
+	                                       class="form-control required">
+	                     		</div>
+	                     		<div class="form-group">
+	                                <label for="password">Password *</label>
+	                                <input id="password" name="password" th:field="*{password}" type="password"
+	                                       class="form-control required">
+	                     		</div>
+	                     		<div class="form-group">
+	                                <label for="nombre">Nombre *</label>
+	                                <input id="nombre" name="nombre" th:field="*{nombre}" type="text"
+	                                       class="form-control required">
+	                     		</div>
+	                     		<div class="form-group">
+	                                <label for="cel">Telefono *</label>
+	                                <input id="cel" name="cel" th:field="*{telefono}" type="text"
+	                                       class="form-control required">
+	                     		</div>
+	                        </div>
+	                        <div class="col-lg-6 col-sm-12">
+	                            <div class="form-group">
+	                                <label for="Direccion">Direccion *</label>
+	                                <input id="Direccion" name="Direccion" th:field="*{direccion}" type="text"
+	                                       class="form-control required">
+	                     		</div>
+	                     		<div class="form-group">
+	                                <label for="Email">Email *</label>
+	                                <input id="Email" name="Email" th:field="*{email}" type="email"
+	                                       class="form-control required">
+	                     		</div>
+	                     		<div class="form-group">
+	                     		<label for="Region">Region *</label>
+	                     		</div>
+	                     		<div class="form-group">
+	                                        <select class="form-control" id="Region" name="Region" th:field="*{idRegion}">
+											    <option th:each="i : ${regiones}" th:value="${i.id}" th:text="${i.detalle}">
+											    </option>
+										    </select>
+	                     		</div>
+	                     		<div class="form-group">
+	                                <label for="edad">Edad *</label>
+	                                <input id="edad" name="edad" th:field="*{edad}" type="number"
+	                                       class="form-control" required >
+	                     		</div>
+	                        </div>
+	                    </div>
+				 </fieldset>  
+				 <button class="btn btn-large btn-success mb-3 mt-3" type="submit">Registrar</button> 
+			</form>
+			<span style="color:red" th:text="${mensaje}"></span>
+	   	</div>
+	  </div>
+	</div>
+	
+<footer>
+</footer>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+ 		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+  		crossorigin="anonymous"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

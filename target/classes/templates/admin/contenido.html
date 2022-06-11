@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+<title>Administración</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!--Barra de navegación-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+	    <div class="container">
+	        <a class="navbar-brand" href="index.html">
+	        	<div class="card" style="width: 5rem;">
+	        		<img class="card-img" src="https://assets.adnradio.cl/2022/03/Nuevo-logo-Gobierno-de-Chile.jpg" alt="Card image cap">
+	        	</div>
+	        Cursos TI
+	        <br/> 
+	        Gobierno de Chile
+	        </a>
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+	                aria-controls="navbarResponsive"
+	                aria-expanded="false" aria-label="Toggle navigation">
+	            <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarResponsive">
+	            <ul class="navbar-nav ms-auto">
+	                <li class="nav-item">
+	                    <a class="nav-link" href="/">Home</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="/Mipanel">Mi Panel</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="/registrate">Registrarse</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="/logout">Logout</a>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</nav>
+<!--Barra de navegación-->
+
+<div class="container">
+        
+          <div id="title" class="text-center mb-5 mt-5">
+		    <h3>Agregar Contenido</h3>
+		  </div>
+			<div class="row">
+			   	<div class="col-lg-5 col-sm-12">
+			        <form action="#" th:action="@{/admin/guardarContenido}" th:object="${contenido}" method="post">
+						 <fieldset>
+			                    <legend>Información del Contenido</legend>
+								<input id="idcurso" th:field="*{idCurso}" type="hidden">
+			                    <div class="row">
+			                        <div class="col-lg-5 col-sm-12">
+			                        	<div class="form-group">
+			                                <label for="nombre">Nombre *</label>
+			                                <input id="nombre" name="nombre" th:field="*{nombre}" type="text"
+			                                       class="form-control required">
+			                     		</div>
+			                            <div class="form-group">
+			                                <label for="detalle">Detalle *</label>
+			                                <input id="detalle" name="detalle" th:field="*{detalle}" type="text"
+			                                       class="form-control required">
+			                     		</div>
+			                        </div>
+			                    </div>
+						 </fieldset>
+						  <button class="btn btn-success btn-block mt-5" type="submit">Guardar</button> 
+			        </form>
+			        
+			         <span style="color:red" th:text="${mensaje}"></span>
+			         <br>
+			         <form id="hotDealForm" th:action="@{/Mipanel}" method="get">
+					    <button class="btn btn-secondary btn-sm mb-5" type="submit">Volver</button>
+					</form>
+			   	</div>
+			   	  	<div class="col-6">
+			        	 <fieldset>
+			                    <legend>Contenidos Asignados</legend>
+								<table id="allEstud" class="table table-striped">
+						            <thead>
+						            <tr>
+						                <th width="20%">Nombre</th>
+						                <th>Descripcion</th>
+						            </tr>
+						            </thead>
+						            <tbody>
+						            <tr class="result" data-th-each="cont : ${contenidos}">
+						                <td>[[${cont.nombre}]]</td>
+						                 <td>[[${cont.detalle}]]</td>
+						                <td><a th:href="@{/admin/elimina/{id}(id=${cont.id})}">Eliminar </a>
+						            </tr>
+						            </tbody>
+						        </table>
+						 </fieldset>
+			        <span style="color:red" th:text="${mensaje}"></span>
+			   	</div>
+			</div>
+</div>
+
+<footer class="text-center text-white static-bottom mt-5" style="background-color: rgb(0, 0, 0);">
+  <!-- Grid container -->
+  <div class="p-4"></div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0);">
+    © 2022 Copyright:
+    <a class="text-white" href="https://localhost:8081">Gobierno de Chile</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+ 		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+  		crossorigin="anonymous"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script src="js/script.js"></script>		 
+  
+</body>
+</html>

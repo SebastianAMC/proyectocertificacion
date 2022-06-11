@@ -1,0 +1,64 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+	<title>Inicio de sesión</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark" style="background-image: url(images/login.jpg); background-position: center; background-repeat: repeat-y; background-size:cover">
+	<!-- Barra de navegación -->
+<header>
+</header>
+
+<div class="container row mt-5 mb-5 mx-auto">
+	<div class="col-lg-4">
+	</div>
+		<div class="col-lg-4 col-sm-12 text-center" style="background-color:rgb(255, 255, 255, 0.8);">
+	
+			<h2 class="form-signin-heading text-dark">Iniciar Sesión</h2>
+			
+			<br/>
+			<br/>
+			<div th:if="${param.error}" class="alert alert-danger">    
+	        	Usuario o contraseña inválida.
+	        </div>
+	        <div th:if="${param.logout}" class="alert alert-success"> 
+	            Ha cerrado sesión exitosamente.
+	        </div>
+			<form class="form-signin" method="POST" th:action="@{/login}">
+				<p>
+					<label for="username" class="sr-only">Rut (Sin puntos ni guión)</label> 
+					<input type="text" id="username" name="username" class="form-control"
+						placeholder="Usuario" required autofocus>
+				</p>
+				<p>
+					<label for="password" class="sr-only">Contraseña</label> 
+					<input type="password" id="password" name="password" class="form-control"
+						placeholder="Contraseña" required>
+				</p>
+				<button class="btn btn-lg btn-warning btn-block" type="submit">Login</button>
+			</form>
+			<a href="/registrate"><button class="btn btn-sm btn-secondary btn-block mb-3">Registrate</button></a>
+			<br/>
+		</div>
+	<div class="col-lg-4">
+	</div>
+</div>
+	
+<footer>
+</footer>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+ 		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+  		crossorigin="anonymous"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

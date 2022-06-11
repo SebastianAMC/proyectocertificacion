@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+	<title>Cursos cortos de TI - Gobierno de Chile</title>
+	<!-- CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link href="css/css.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+</header>
+
+	 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+	  </ol>
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img src="images/Carrusel1.jpg" class="d-block w-100" alt="mujerexitosa">
+	      <div class="carousel-caption d-none d-md-block">
+	        <h5 style="text-shadow: 2px 2px 2px black">Comienza una carrera TI</h5>
+	        <p style="text-shadow: 2px 2px 2px black">Inscríbete en uno de nuestros cursos y consigue el empleo soñado</p>
+	      </div>
+	    </div>
+	    <div class="carousel-item">
+	      <img src="images/Carrusel2.jpg" class="d-block w-100" alt="computador">
+	      <div class="carousel-caption d-none d-md-block">
+	        <h5 style="text-shadow: 2px 2px 2px black">Comodidad del hogar</h5>
+	        <p style="text-shadow: 2px 2px 2px black">Estudia desde tu casa, sin necesidad de trasladarte</p>
+	      </div>
+	    </div>
+	    <div class="carousel-item">
+	      <img src="images/Carrusel3.jpg" class="d-block w-100" alt="jovenes">
+	      <div class="carousel-caption d-none d-md-block">
+	        <h5 style="text-shadow: 2px 2px 2px black">Ya son cientos los que decidieron actualizarse</h5>
+	        <p style="text-shadow: 2px 2px 2px black">Nuestros estudiantes ya forman parte del mundo TI. ¡Que esperas!</p>
+	      </div>
+	    </div>
+	  </div>
+	  <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only"></span>
+	  </button>
+	  <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="sr-only"></span>
+	  </button>
+	</div>
+
+	<!-- Contenido del home-->
+<div style="background-color: rgb(26, 45, 45);" class="p-5">
+	<h1 class="text-light text-center mb-5" style="text-shadow: 2px 2px 2px black">Nuestros Cursos</h1>
+	<div class="container row col-12 mx-auto">
+		<div class="col-lg-4 col-sm-12">
+			<div class="card mb-3 text-white bg-dark">
+				<img class="card-img-top" src="https://red.computerworld.es/archivos/202205/java-concurrency.png" alt="Card image cap">
+				<div class="card-body">
+			    	<h5 class="card-title">Desarrollador FullStack Java</h5>
+			    	<p class="card-text">Desarrolla las habilidades necesarias para construir y mantener piezas de software en lenguaje Java . DURACIÓN: 480 HORAS</p>
+			    	<a href="/registrate"><p class="card-text"><small class="text-white"><button class="btn btn-sm btn-warning">Postula aquí</button></small></p></a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-12">
+			<div class="card text-white bg-dark">
+			  	<img class="card-img-top" src="https://www.cursosgis.com/wp-content/uploads/1-52.jpg" alt="Card image cap">
+				<div class="card-body">
+			    	<h5 class="card-title">Desarrollador Aplicaciones Front-End</h5>
+			    	<p class="card-text">Desarrollo de habilidades para construir y mantener aplicaciones o sitios web, con HTML, CSS y JavaScript. Duración: 438 horas</p>
+			    	<a href="/registrate"><p class="card-text"><small class="text-white"><button class="btn btn-sm btn-warning">Postula aquí</button></small></p></a>
+			  	</div>
+		  	</div>
+		</div>
+		<div class="col-lg-4 col-sm-12">
+			<div class="card text-white bg-dark">
+			  	<img class="card-img-top" src="https://i.blogs.es/1d8a5b/python1/450_1000.jpg" alt="Card image cap">
+				<div class="card-body">
+			    	<h5 class="card-title">Desarrollador FullStack Python</h5>
+			    	<p class="card-text">Desarrollo de habilidades necesarias para construir, mantener y crear aplicaciones web en Python y operar una base de datos. DURACIÓN: 462 HORAS</p>
+			    	<a href="/registrate"><p class="card-text"><small class="text-white"><button class="btn btn-sm btn-warning">Postula aquí</button></small></p></a>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Testimonios-->
+<section class="testimonial text-center">
+        <div class="container">
+
+            <div class="heading white-heading">
+                Ellos ya vivieron la experiencia
+            </div>
+            <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+             
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                            <p>Una gran experiencia. Definitvamente marcó un antes y un después dentro de mi carrera profesional. Hoy me desmpeño en una gran empresa</p>
+                            <h4>Carlos</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="https://ijobscenter.com/wp-content/uploads/2017/08/Alexis-testimonial-of-pelle-dolce.jpg" class="img-circle img-responsive" />
+                            <p>Excelentes docentes. Logré aumentar mi conocimiento acerca del mundo TI y hoy soy muy requerida dentro del mercado </p>
+                            <h4>Sandra</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="https://edl.pymes.site/wp-content/uploads/sites/30/2021/10/testimonial-circle-face04.jpg" class="img-circle img-responsive" />
+                            <p>Al comienzo estaba un poco escéptico acerca del curso. Hoy soy jefe de proyecto gracias a los conocimientos entregados aquí, absolutamente recomendado. </p>
+                            <h4>Pablo</h4>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+ <!--Testimonios-->
+
+<footer>
+</footer>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+ 		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+  		crossorigin="anonymous"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script src="js/script.js"></script> 
+
+</body>
+</html>

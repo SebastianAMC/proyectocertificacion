@@ -61,7 +61,7 @@ public class LoginController {
 			model.addAttribute("estudiante", serviceEst.obtenerCurso(rut));
 			return "users/panel";
 		}
-		return "/login";
+		return "redirect:/login";
     }
 	
 	
